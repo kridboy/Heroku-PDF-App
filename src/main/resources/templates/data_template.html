@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <form action="#" th:action="@{/}" th:object="${dataForm}" method="post">
+            <table>
+                <tr>
+                    <td>CaseNumber:</td>
+                    <td><input type="text" th:field="*{caseNumber}" /></td>
+                    <td th:if="${#fields.hasErrors('caseNumber')}" th:errors="*{caseNumber}">Error</td>
+                </tr>
+                <tr>
+                    <td>WordCount:</td>
+                    <td><input type="text" th:field="*{wordCount}" /></td>
+                    <td th:if="${#fields.hasErrors('wordCount')}" th:errors="*{wordCount}">Error</td>
+                </tr>
+                <tr>
+                    <td>BriefCount:</td>
+                    <td><input type="text" th:field="*{briefCount}" /></td>
+                    <td th:if="${#fields.hasErrors('briefCount')}" th:errors="*{briefCount}">Error</td>
+                </tr>
+                <tr>
+                    <td>SignatureName:</td>
+                    <td><input type="text" th:field="*{sigName}" /></td>
+                    <td th:if="${#fields.hasErrors('sigName')}" th:errors="*{sigName}">Age Error</td>
+                </tr>
+                <tr>
+                    <td>Date:</td>
+                    <td><input type="date" th:field="*{date}" /></td>
+                    <td th:if="${#fields.hasErrors('date')}" th:errors="*{date}">Age Error</td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
