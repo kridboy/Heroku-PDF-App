@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: hello.ApplicationMockMvcTests
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.453 s <<< FAILURE! - in hello.ApplicationMockMvcTests
+checkPersonInfoWhenValidRequestThenSuccess  Time elapsed: 0.029 s  <<< FAILURE!
+java.lang.AssertionError: 
+Unexpected binding/validation errors: org.springframework.validation.BeanPropertyBindingResult: 5 errors
+Field error in object 'dataForm' on field 'date': rejected value [null]; codes [NotNull.dataForm.date,NotNull.date,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [dataForm.date,date]; arguments []; default message [date]]; default message [must not be null]
+Field error in object 'dataForm' on field 'sigName': rejected value [null]; codes [NotNull.dataForm.sigName,NotNull.sigName,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [dataForm.sigName,sigName]; arguments []; default message [sigName]]; default message [must not be null]
+Field error in object 'dataForm' on field 'wordCount': rejected value [null]; codes [NotNull.dataForm.wordCount,NotNull.wordCount,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [dataForm.wordCount,wordCount]; arguments []; default message [wordCount]]; default message [must not be null]
+Field error in object 'dataForm' on field 'caseNumber': rejected value [null]; codes [NotNull.dataForm.caseNumber,NotNull.caseNumber,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [dataForm.caseNumber,caseNumber]; arguments []; default message [caseNumber]]; default message [must not be null]
+Field error in object 'dataForm' on field 'briefCount': rejected value [null]; codes [NotNull.dataForm.briefCount,NotNull.briefCount,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [dataForm.briefCount,briefCount]; arguments []; default message [briefCount]]; default message [must not be null]
+	at hello.ApplicationMockMvcTests.checkPersonInfoWhenValidRequestThenSuccess(ApplicationMockMvcTests.java:83)
+

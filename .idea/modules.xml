@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/complete.iml" filepath="$PROJECT_DIR$/.idea/modules/complete.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/complete.main.iml" filepath="$PROJECT_DIR$/.idea/modules/complete.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/complete.test.iml" filepath="$PROJECT_DIR$/.idea/modules/complete.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/gs-validating-form-input.iml" filepath="$PROJECT_DIR$/gs-validating-form-input.iml" />
     </modules>
   </component>

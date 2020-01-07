@@ -10,7 +10,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
-import javax.validation.constraints.Pattern;
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -44,7 +43,7 @@ public class DataForm {
         this.wordCount = wordCount;
         this.briefCount = briefCount;
         this.sigName = sigName;
-        this.date = LocalDate.now();
+        this.date = date;
     }
 
     public LocalDate getDate() {
@@ -121,11 +120,11 @@ public class DataForm {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PdfReader reader = new PdfReader(new FileInputStream("src/main/resources/forms/form08.pdf"));
         PdfWriter writer = new PdfWriter(baos);
-        PdfDocument pdf = new PdfDocument(reader,writer);
-        PdfAcroForm form = PdfAcroForm.getAcroForm(pdf,true);
+        PdfDocument pdf = new PdfDocument(reader, writer);
+        PdfAcroForm form = PdfAcroForm.getAcroForm(pdf, true);
         Map<String, PdfFormField> fields = form.getFormFields();
 
-        fields.get("form08[0].Page1[0].Signature[0]").setValue("s/"+getSigName());
+        fields.get("form08[0].Page1[0].Signature[0]").setValue("s/" + getSigName());
         fields.get("form08[0].Page1[0].CaseNumber[0]").setValue(caseNumber);
         fields.get("form08[0].Page1[0].Words[0]").setValue(wordCount.toString());
         fields.get("form08[0].Page1[0].CourtOrderDate[0]").setValue(getDate().format(DateTimeFormatter.ofPattern("LLL d, u")));
